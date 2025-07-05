@@ -1,0 +1,23 @@
+{
+  "project_name": "mern-application",
+  "project_type": "web_app",
+  "core_entities": [
+    "User",
+    "Task"
+  ],
+  "backend": {
+    "package.json": "Node.js backend dependencies",
+    "server.js": "Express server with MongoDB connection",
+    "models/Task.js": "Task mongoose schema",
+    "routes/tasks.js": "Task API endpoints",
+    "controllers/taskController.js": "Task business logic"
+  },
+  "frontend": {
+    "package.json": "React frontend dependencies",
+    "src/App.jsx": "Main React application component",
+    "src/main.jsx": "React DOM root",
+    "src/store/taskStore.js": "Zustand task state management",
+    "src/api/taskService.js": "Task API service functions",
+    "src/components/TaskList.jsx": "Task list component"
+  }
+}
