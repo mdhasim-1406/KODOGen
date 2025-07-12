@@ -1,0 +1,37 @@
+{
+  "project_name": "task-manager-kebab",
+  "project_type": "productivity",
+  "core_entities": [
+    "User",
+    "Task"
+  ],
+  "backend": {
+    "package.json": "Dependencies and scripts for Node.js/Express backend (e.g., express, mongoose, jsonwebtoken)",
+    "server.js": "Main Express server setup with MongoDB connection and JWT authentication",
+    "models/User.js": "Mongoose schema definition for User entity",
+    "models/Task.js": "Mongoose schema definition for Task entity",
+    "controllers/userController.js": "Business logic and CRUD operations for User entity",
+    "controllers/taskController.js": "Business logic and CRUD operations for Task entity",
+    "routes/auth.js": "API endpoints for user authentication",
+    "routes/users.js": "API endpoints for user management",
+    "routes/tasks.js": "API endpoints for task management",
+    "middleware/auth.js": "Authentication and authorization middleware",
+    "config/database.js": "MongoDB connection configuration",
+    ".env": "Environment variables for configuration (e.g., MONGODB_URI, JWT_SECRET)",
+    "utils/helpers.js": "Utility functions for the backend"
+  },
+  "frontend": {
+    "package.json": "React dependencies including Zustand, Axios, Tailwind, React Router",
+    "public/index.html": "Root HTML template with proper meta tags and favicon",
+    "src/main.jsx": "React DOM root and app initialization",
+    "src/App.jsx": "Main app component with routing and global state management",
+    "src/store/appStore.js": "Zustand global state management for authentication and UI state",
+    "src/api/apiService.js": "Axios configuration and API functions for CRUD operations",
+    "src/components/Header.jsx": "Reusable Header component with navigation and user info",
+    "src/components/TaskList.jsx": "Reusable Task List component for displaying tasks",
+    "src/components/TaskForm.jsx": "Reusable Task Form component for adding and editing tasks",
+    "src/pages/Dashboard.jsx": "Main page component for user's task list",
+    "src/hooks/useCustomHook.js": "Custom React hooks for logic reuse (e.g., useAuth, useTasks)",
+    "src/utils/formatDate.js": "Utility functions for formatting dates"
+  }
+}

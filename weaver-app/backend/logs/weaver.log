@@ -20,3 +20,135 @@
 2025-07-12 15:04:58,402 - app.core.state_tracker - INFO - Generation initialized: e76b5be2-6e45-438e-a75c-ff50ddd208cb
 2025-07-12 15:04:58,411 - app.core.websocket_manager - INFO - Task initialized: e76b5be2-6e45-438e-a75c-ff50ddd208cb
 2025-07-12 15:04:58,431 - app.core.state_tracker - INFO - Generation status updated: e76b5be2-6e45-438e-a75c-ff50ddd208cb -> planning
+2025-07-12 15:07:28,447 - app.core.ai_generator - ERROR - Ollama API timeout on attempt 1
+2025-07-12 15:10:00,448 - app.core.ai_generator - ERROR - Ollama API timeout on attempt 2
+2025-07-12 15:12:34,450 - app.core.ai_generator - ERROR - Ollama API timeout on attempt 3
+2025-07-12 15:12:34,450 - app.core.ai_generator - ERROR - Architectural blueprint generation failed: Failed to connect to Ollama after 3 attempts. Last error: Ollama API timeout on attempt 3
+2025-07-12 15:15:22,765 - app.core.state_tracker - INFO - Generation status updated: e76b5be2-6e45-438e-a75c-ff50ddd208cb -> failed
+2025-07-12 15:15:22,765 - app.routers.generate - ERROR - Generation failed for task e76b5be2-6e45-438e-a75c-ff50ddd208cb: Generation timeout
+2025-07-12 15:15:22,765 - app.core.state_tracker - INFO - Generation status updated: e76b5be2-6e45-438e-a75c-ff50ddd208cb -> failed
+2025-07-12 15:15:22,831 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:15:23,430 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:18:27,600 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:18:28,078 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:19:17,477 - app.core.state_tracker - INFO - Generation initialized: 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f
+2025-07-12 15:19:17,478 - app.core.websocket_manager - INFO - Task initialized: 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f
+2025-07-12 15:19:17,479 - app.core.state_tracker - INFO - Generation status updated: 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f -> planning
+2025-07-12 15:21:47,547 - app.core.ai_generator - ERROR - Ollama API timeout on attempt 1
+2025-07-12 15:24:19,549 - app.core.ai_generator - ERROR - Ollama API timeout on attempt 2
+2025-07-12 15:29:31,653 - app.core.ai_generator - ERROR - Full-stack critique failed: Expecting property name enclosed in double quotes: line 9 column 3 (char 1411)
+2025-07-12 15:29:31,654 - app.core.state_tracker - INFO - Generation status updated: 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f -> failed
+2025-07-12 15:29:31,654 - app.routers.generate - ERROR - Generation failed for task 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f: Generation timeout
+2025-07-12 15:29:31,654 - app.core.state_tracker - INFO - Generation status updated: 5b38ecf8-ba1e-4ebc-8000-5b574b39f86f -> failed
+2025-07-12 15:29:31,692 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:29:32,043 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:29:32,244 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:29:32,589 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:29:39,706 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:29:40,167 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:30:12,530 - app.core.state_tracker - INFO - Generation initialized: 17e3126b-279a-4234-a326-4881282a8a76
+2025-07-12 15:30:12,530 - app.core.websocket_manager - INFO - Task initialized: 17e3126b-279a-4234-a326-4881282a8a76
+2025-07-12 15:30:12,531 - app.core.state_tracker - INFO - Generation status updated: 17e3126b-279a-4234-a326-4881282a8a76 -> planning
+2025-07-12 15:32:17,437 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:19,438 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:23,440 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:23,440 - app.core.ai_generator - ERROR - Backend file generation failed for package.json: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:23,441 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:25,443 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:29,445 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:29,445 - app.core.ai_generator - ERROR - Backend file generation failed for models/User.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:29,446 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:31,448 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:35,450 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:35,450 - app.core.ai_generator - ERROR - Backend file generation failed for models/Task.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:35,451 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:37,453 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:41,453 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:41,453 - app.core.ai_generator - ERROR - Backend file generation failed for controllers/userController.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:41,454 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:43,456 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:47,457 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:47,457 - app.core.ai_generator - ERROR - Backend file generation failed for controllers/taskController.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:47,458 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:49,460 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:53,461 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:53,462 - app.core.ai_generator - ERROR - Backend file generation failed for routes/auth.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:53,463 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:55,464 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:59,466 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:59,466 - app.core.ai_generator - ERROR - Backend file generation failed for routes/users.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:32:59,467 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:01,469 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:05,471 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:05,471 - app.core.ai_generator - ERROR - Backend file generation failed for routes/tasks.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:05,472 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:07,472 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:11,473 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:11,473 - app.core.ai_generator - ERROR - Backend file generation failed for middleware/auth.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:11,474 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:13,475 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:17,477 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:17,477 - app.core.ai_generator - ERROR - Backend file generation failed for server.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:17,478 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:19,480 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:23,482 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:23,482 - app.core.ai_generator - ERROR - Backend file generation failed for .env: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:23,482 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:25,485 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:29,486 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:29,486 - app.core.ai_generator - ERROR - Frontend file generation failed for package.json: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:29,487 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:31,489 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:35,491 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:35,491 - app.core.ai_generator - ERROR - Frontend file generation failed for src/api/apiService.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:35,492 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:37,494 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:41,495 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:41,495 - app.core.ai_generator - ERROR - Frontend file generation failed for src/store/appStore.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:41,496 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:43,497 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:47,498 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:47,498 - app.core.ai_generator - ERROR - Frontend file generation failed for src/hooks/useCustomHook.js: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:47,499 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:49,501 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:53,502 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:53,502 - app.core.ai_generator - ERROR - Frontend file generation failed for src/components/Header.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:53,503 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:55,505 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:59,507 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:59,507 - app.core.ai_generator - ERROR - Frontend file generation failed for src/components/TaskList.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:33:59,508 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:01,509 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:05,511 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:05,511 - app.core.ai_generator - ERROR - Frontend file generation failed for src/components/TaskForm.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:05,512 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:07,512 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:11,514 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:11,514 - app.core.ai_generator - ERROR - Frontend file generation failed for src/pages/Dashboard.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:11,516 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:13,517 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:17,518 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:17,518 - app.core.ai_generator - ERROR - Frontend file generation failed for src/App.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:17,519 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:19,521 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:23,522 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:23,522 - app.core.ai_generator - ERROR - Frontend file generation failed for src/main.jsx: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:23,523 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:25,525 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:29,527 - app.core.ai_generator - ERROR - Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:34:29,527 - app.core.ai_generator - ERROR - Frontend file generation failed for public/index.html: Failed to connect to Ollama after 3 attempts. Last error: Ollama API error: 404 - {"error":"model 'deepseek-coder:6.7b' not found"}
+2025-07-12 15:36:20,021 - app.core.ai_generator - ERROR - Full-stack critique failed: Expecting property name enclosed in double quotes: line 12 column 3 (char 986)
+2025-07-12 15:36:20,021 - app.core.state_tracker - INFO - Generation status updated: 17e3126b-279a-4234-a326-4881282a8a76 -> failed
+2025-07-12 15:36:20,021 - app.routers.generate - ERROR - Generation failed for task 17e3126b-279a-4234-a326-4881282a8a76: Generation stalled
+2025-07-12 15:36:20,021 - app.core.state_tracker - INFO - Generation status updated: 17e3126b-279a-4234-a326-4881282a8a76 -> failed
+2025-07-12 15:36:36,474 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:36:37,181 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:39:17,643 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 15:41:53,697 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 15:41:56,987 - app.core.state_tracker - INFO - Generation initialized: fa6c6ce8-a855-49ff-83aa-ca9e40750dbe
+2025-07-12 15:41:56,987 - app.core.websocket_manager - INFO - Task initialized: fa6c6ce8-a855-49ff-83aa-ca9e40750dbe
+2025-07-12 16:00:24,081 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 16:00:24,747 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 16:01:11,859 - app.main - INFO - Shutting down Weaver Backend...
+2025-07-12 16:01:12,510 - app.main - INFO - Starting Weaver Backend...
+2025-07-12 16:02:20,287 - app.main - INFO - Shutting down Weaver Backend...
