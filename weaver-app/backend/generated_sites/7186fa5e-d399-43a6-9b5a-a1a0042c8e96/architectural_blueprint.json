@@ -1,0 +1,35 @@
+{
+  "project_name": "Taskify-MERN",
+  "project_type": "productivity",
+  "core_entities": [
+    "User",
+    "Task"
+  ],
+  "backend": {
+    "package.json": "Dependencies and scripts for Node.js/Express backend",
+    "server.js": "Main Express server setup with MongoDB connection",
+    "models/User.js": "Mongoose schema definition for User entity",
+    "models/Task.js": "Mongoose schema definition for Task entity",
+    "controllers/userController.js": "Business logic and CRUD operations for User",
+    "controllers/taskController.js": "Business logic and CRUD operations for Task",
+    "routes/users.js": "API endpoints and route handlers for User entity",
+    "routes/tasks.js": "API endpoints and route handlers for Task entity",
+    "middleware/auth.js": "Authentication and authorization middleware",
+    "config/database.js": "MongoDB connection configuration",
+    ".env": "Environment variables for configuration"
+  },
+  "frontend": {
+    "package.json": "React dependencies including Axios, Tailwind CSS, Zustand",
+    "public/index.html": "Root HTML template with proper meta tags",
+    "src/main.jsx": "React DOM root and app initialization",
+    "src/App.jsx": "Main app component with routing",
+    "src/store/appStore.js": "Zustand global state management",
+    "src/api/apiService.js": "Axios configuration and API functions for backend communication",
+    "src/components/Authentication.jsx": "Reusable UI components for authentication",
+    "src/components/TaskList.jsx": "Reusable UI component to display tasks",
+    "src/components/TaskForm.jsx": "Reusable UI component for creating and editing tasks",
+    "src/pages/Dashboard.jsx": "Main page component for user's task list",
+    "src/hooks/useAuthentication.js": "Custom React hook for handling authentication state",
+    "src/hooks/useTaskState.js": "Custom React hook for managing task state"
+  }
+}

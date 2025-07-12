@@ -1,0 +1,35 @@
+{
+  "project_name": "task-manager-kebab",
+  "project_type": "productivity",
+  "core_entities": [
+    "User",
+    "Task"
+  ],
+  "backend": {
+    "package.json": "Dependencies and scripts for Node.js/Express backend",
+    "server.js": "Main Express server setup with MongoDB connection",
+    "models/User.js": "Mongoose schema definition for User entity",
+    "models/Task.js": "Mongoose schema definition for Task entity",
+    "controllers/userController.js": "Business logic and CRUD operations for User",
+    "controllers/taskController.js": "Business logic and CRUD operations for Task",
+    "routes/users.js": "API endpoints and route handlers for User",
+    "routes/tasks.js": "API endpoints and route handlers for Task",
+    "middleware/auth.js": "Authentication and authorization middleware",
+    "config/database.js": "MongoDB connection configuration",
+    ".env": "Environment variables for configuration"
+  },
+  "frontend": {
+    "package.json": "React dependencies including Axios, Tailwind CSS",
+    "public/index.html": "Root HTML template with proper meta tags",
+    "src/main.jsx": "React DOM root and app initialization",
+    "src/App.jsx": "Main app component with routing",
+    "src/store/appStore.js": "Zustand global state management for application state",
+    "src/api/apiService.js": "Axios configuration and API functions for backend communication",
+    "src/components/AuthForm.jsx": "Reusable UI component for user authentication",
+    "src/components/TaskList.jsx": "Reusable UI component for displaying tasks",
+    "src/components/TaskForm.jsx": "Reusable UI component for creating and editing tasks",
+    "src/pages/Dashboard.jsx": "Main page component for user's task management",
+    "src/hooks/useAuth.js": "Custom React hook for handling user authentication state",
+    "src/hooks/useTasks.js": "Custom React hook for managing task data"
+  }
+}

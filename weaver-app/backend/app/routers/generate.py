@@ -1,52 +1,98 @@
-from fastapi import APIRouter, BackgroundTasks, HTTPException
-from app.models.request_models import GenerateWebsiteRequest
-from app.core.ai_generator import DigitalArchitectGenerator
+from fastapi import APIRouter, HTTPException, BackgroundTasks
 import uuid
 import logging
+from typing import Dict
 
-logger = logging.getLogger(__name__)
+from app.core.ai_generator import DigitalArchitectGenerator
+from app.core.state_tracker import state_tracker, GenerationStatus
+from app.core.websocket_manager import manager
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 @router.post("/generate")
-async def generate_mern_application_with_digital_architect(request: GenerateWebsiteRequest, background_tasks: BackgroundTasks):
+async def generate_website(request: Dict[str, str], background_tasks: BackgroundTasks):
     """
-    Digital Architect Protocol - Full-Stack MERN Application Generation
-    Implements Dr. Reed's hierarchical dependency management and system weaving
+    Generate a new website with enhanced monitoring and validation
     """
-    try:
-        # Generate unique task ID
-        task_id = str(uuid.uuid4())
+    prompt = request.get("prompt")
+    if not prompt:
+        raise HTTPException(status_code=400, detail="Prompt is required")
         
-        # Initialize Digital Architect Generator
-        digital_architect = DigitalArchitectGenerator(
+    # Generate unique task ID
+    task_id = str(uuid.uuid4())
+    
+    # Initialize state tracking
+    state_tracker.initialize_generation(task_id, prompt)
+    await manager.initialize_task(task_id)
+    
+    try:
+        # Start generation in background
+        background_tasks.add_task(
+            handle_generation,
             task_id=task_id,
-            prompt=request.prompt
+            prompt=prompt
         )
         
-        # Start Digital Architect Protocol in background
-        background_tasks.add_task(digital_architect.generate_mern_application)
-        
-        logger.info(f"Digital Architect Protocol started for task: {task_id}")
-        
-        return {
-            "task_id": task_id,
-            "status": "Digital Architect Protocol activated - MERN application weaving started",
-            "message": "🏗️ Dr. Reed's Digital Architect is designing your full-stack ecosystem"
-        }
+        return {"task_id": task_id}
         
     except Exception as e:
-        logger.error(f"Error starting Digital Architect Protocol: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to start MERN generation: {str(e)}")
+        logger.error(f"Failed to start generation: {e}")
+        state_tracker.update_status(
+            task_id,
+            GenerationStatus.FAILED,
+            error=str(e)
+        )
+        raise HTTPException(status_code=500, detail=str(e))
+
+async def handle_generation(task_id: str, prompt: str):
+    """
+    Handle the website generation process with monitoring
+    """
+    generator = DigitalArchitectGenerator(task_id, prompt)
+    
+    try:
+        # Update status to planning
+        state_tracker.update_status(
+            task_id,
+            GenerationStatus.PLANNING,
+            progress=10,
+            current_phase="blueprint_generation"
+        )
+        
+        # Start generation
+        await generator.generate_mern_application()
+        
+        # Validate final state
+        if not state_tracker.validate_generation(task_id):
+            error_state = state_tracker.get_state(task_id)
+            error_msg = error_state.get("error", "Generation validation failed")
+            raise Exception(error_msg)
+        
+        # Update final status
+        state_tracker.update_status(
+            task_id,
+            GenerationStatus.COMPLETED,
+            progress=100,
+            current_phase="completed"
+        )
+        
+    except Exception as e:
+        logger.error(f"Generation failed for task {task_id}: {e}")
+        state_tracker.update_status(
+            task_id,
+            GenerationStatus.FAILED,
+            error=str(e)
+        )
+        await manager.send_error(task_id, str(e))
+        raise
 
 @router.get("/status/{task_id}")
 async def get_generation_status(task_id: str):
     """
-    Get AI generation status (for REST API compatibility)
+    Get the current status of a generation task
     """
-    # Note: Real-time status is provided via WebSocket
-    # This endpoint is for fallback/polling if needed
-    return {
-        "task_id": task_id,
-        "message": "Use WebSocket connection for real-time AI generation status"
-    }
+    state = state_tracker.get_state(task_id)
+    if not state:
+        raise HTTPException(status_code=404, detail="Task not found")
+    return state

@@ -1,0 +1,36 @@
+{
+  "project_name": "dark-portfolio",
+  "project_type": "web_app",
+  "core_entities": [
+    "User",
+    "Project"
+  ],
+  "backend": {
+    "package.json": "Dependencies and scripts for Node.js/Express backend",
+    "server.js": "Main Express server setup with MongoDB connection",
+    "models/User.js": "Mongoose schema definition for User entity",
+    "models/Project.js": "Mongoose schema definition for Project entity",
+    "controllers/userController.js": "Business logic and CRUD operations for User",
+    "controllers/projectController.js": "Business logic and CRUD operations for Project",
+    "routes/users.js": "API endpoints and route handlers for User",
+    "routes/projects.js": "API endpoints and route handlers for Project",
+    "middleware/auth.js": "Authentication and authorization middleware",
+    "config/database.js": "MongoDB connection configuration",
+    ".env": "Environment variables for configuration"
+  },
+  "frontend": {
+    "package.json": "React dependencies including Zustand, Axios, Tailwind",
+    "public/index.html": "Root HTML template with proper meta tags",
+    "src/main.jsx": "React DOM root and app initialization",
+    "src/App.jsx": "Main app component with routing",
+    "src/store/appStore.js": "Zustand global state management for application state",
+    "src/api/apiService.js": "Axios configuration and API functions for backend communication",
+    "src/components/Header.jsx": "Reusable UI component for header section",
+    "src/components/Footer.jsx": "Reusable UI component for footer section",
+    "src/components/ProjectCard.jsx": "Reusable UI component for project cards",
+    "src/pages/Home.jsx": "Main page component displaying projects",
+    "src/pages/AboutMe.jsx": "Page component about the developer",
+    "src/pages/ContactForm.jsx": "Page component with contact form",
+    "src/hooks/useCustomHook.js": "Custom React hooks for logic reuse"
+  }
+}

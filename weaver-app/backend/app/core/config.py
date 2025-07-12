@@ -1,6 +1,6 @@
 import os
-from pydantic_settings import BaseSettings
-from typing import Optional, List
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import Optional
 
 class Settings(BaseSettings):
     # API Configuration
@@ -11,7 +11,8 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     
     # File Storage
-    GENERATED_SITES_DIR: str = "generated_sites"
+    BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    GENERATED_SITES_DIR: str = os.path.join(BASE_DIR, "generated_sites")
     MAX_CONCURRENT_JOBS: int = 5
     
     # WebSocket Configuration
@@ -28,20 +29,22 @@ class Settings(BaseSettings):
     CORS_ORIGINS: str = '["http://localhost:3000", "http://localhost:5173"]'
     
     # AI Model Configuration
-    AI_MODEL: str = "gpt-4"
-    AI_TEMPERATURE: float = 0.3
-    AI_MAX_TOKENS: int = 4000
+    AI_MODEL: str = "mistral:latest"
+    AI_TEMPERATURE: float = 0.2
+    AI_MAX_TOKENS: int = 4096
     AI_STREAMING: bool = True
     
     # Quality Validation Settings
-    QUALITY_THRESHOLD: int = 75
+    QUALITY_THRESHOLD: int = 80
     ENABLE_GOLDEN_PROMPT_VALIDATION: bool = True
     
     # Security
     SECRET_KEY: str = "kodogen-ai-powered-website-generator-2025"
     
-    class Config:
-        env_file = ".env"
-        extra = "ignore"  # Allow extra fields without validation errors
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding='utf-8',
+        extra='ignore'
+    )
 
 settings = Settings()
